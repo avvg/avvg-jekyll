@@ -5,6 +5,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
   
 media_folder: 'assets/images'
+public_folder: "assets/images" # The src attribute for uploaded media will begin with /images/uploads
 collections:
   - name: 'posts'
     label: 'Posts'
@@ -14,4 +15,6 @@ collections:
     fields:
       - { name: title}
       - { name: body, widget: "markdown"}
-# publish_mode: editorial_workflow
+      - { name: image, widget: "image"}
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+publish_mode: editorial_workflow
