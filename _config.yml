@@ -1,36 +1,27 @@
 # Site
-name: "Memoirs"
-title: "Memoirs"
-description: "I will take you on the fabulous world of exploration. Travel, culture, lifestyle. Eat, Pray, Love!"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /jekyll-theme-memoirs
-google_analytics: 'UA-xxxxxxxx-1'
+name: "Açık Veri ve Veri Gazeteciliği Derneği"
+title: "Açık Veri ve Veri Gazeteciliği Derneği"
+description: "Açık Veri ve Veri Gazeteciliği Derneği, Türkiye'de ifade özgürlüğü ve dijital haklar alanında çalışan bir sivil toplum örgütüdür."
+logo: 'assets/images/avvg_logo.png'
+favicon: 'assets/images/avvg_logo.png'
+baseurl: ''
+google_analytics: 'UA-168021319-1'
 disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+mailchimp-list: 'https://avvg.us10.list-manage.com/subscribe/post?u=5390cb466c2c2cfa613a16ff4&amp;id=a7c8858d32'
 include: ["_pages"]
 permalink: /:title/
-email: wowthemesnet@gmail.com
+email: info@avvg.org.tr
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/donate/
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  avvg:
+    name: AVVG
+    display_name: Açık Veri ve Veri Gazeteciliği Derneği
+    gravatar: 
+    email: info@avvg.org.tr
+    web: http://www.avvg.org.tr/
+    twitter: https://twitter.com/AcikVeriDernegi
+    description: ""
 
 # Plugins
 plugins:
@@ -79,3 +70,12 @@ sass:
   style: compressed
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+# Comments (true or false)
+comments: false
+
+# Related posts (true or false)
+related-posts: false
+
+# Show author details (true or false)
+show-author: false

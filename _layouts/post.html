@@ -8,7 +8,15 @@ post_class: post-template
 <div class="entry-header">
     <!-- Post Title -->
     <h1 class="posttitle">{{ page.title }}</h1>
+    <!-- Categories -->
+    <div class="{% unless page.categories == empty %} related-posts {% endunless %}" style="margin-top: 20px">  
+    {% assign sortedCategories = page.categories | sort %}
+    {% for category in sortedCategories %}
+    <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>                
+    {% endfor %}
+    </div>
     <!-- Author & Date  Box -->
+    {% if site.show-author != false %}
     {% assign author = site.authors[page.author] %}
     {% if page.author %}
     <div class="d-flex align-items-center mt-4">
@@ -27,6 +35,7 @@ post_class: post-template
         {% endif %}
         </div>            
     </div>
+    {% endif %}
     {% endif %}
 </div>
 

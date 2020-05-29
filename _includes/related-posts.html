@@ -1,5 +1,6 @@
 <!-- Related Posts
 ================================================== -->
+{% if site.related-posts != false %} 
 <div class="{% unless page.categories == empty %} related-posts {% endunless %}">  
 
     {% unless page.categories == empty %}
@@ -52,3 +53,4 @@
         {% endfor %}
         </div>        
 </div>
+{% endif %}

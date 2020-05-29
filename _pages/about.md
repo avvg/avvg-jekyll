@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Memoirs, a free minimalist Jekyll blogging theme with modern design 
+title: Açık Veri ve Veri Gazeteciliği Derneği 
 permalink: /about
 comments: false
-image: assets/images/screenshot.jpg
-imageshadow: true
 ---
 
-This website is a demonstration to see **Memoirs Jekyll theme** in action. The theme is compatible with Github pages, in fact even this demo itself is created with Github Pages and hosted with Github. 
+2015 yılında kurulan AVVG, Türkiye'de veri gazeteciliği pratiklerinin gelişmesini kolaylaştırmak, devlet organlarının hesap verebilirliğini artırmak, kamusal tartışmaları veri eksenine çekmek amacıyla kurulmuştur.
 
-<a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/" class="btn btn-dark"> Get Memoirs for Jekyll &rarr;</a>
+<a target="_blank" href="#" class="btn btn-dark"> Tüzük &rarr;</a>
 

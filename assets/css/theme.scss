@@ -5,6 +5,7 @@
 $brown: #B59F62;
 $teal: #40FFDC;
 $black: #111;
+$softblack: #212529;
 $primary: $teal;
 $dark:    $black;
 $enable-rounded: false;
@@ -18,7 +19,7 @@ $enable-rounded: false;
 
 // general
 body, input, button, select, optgroup, textarea {   
-    font-family:Sen;
+    font-family:Montserrat;
 }
 body {
     line-height:1.7;
@@ -114,9 +115,9 @@ img, img:hover {
 }
 // menu
 .navbar-brand img {
-    max-height:80px;
-    margin-bottom:40px;
-    margin-top:40px;
+    max-height:160px;
+    margin-bottom:10px;
+    margin-top:10px;
 }
 .sidebar {
     position: fixed;
@@ -729,4 +730,11 @@ body.active-side {
             height:35px;
         }
     }
+}
+
+
+/* CUSTOM */
+
+.social_icons i {
+    color: $softblack;
 }

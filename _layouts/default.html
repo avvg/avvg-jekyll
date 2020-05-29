@@ -16,6 +16,8 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 
 {% if jekyll.environment == 'production' %}
@@ -34,7 +36,7 @@ ga('send', 'pageview');
 <body>
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	</noscript>
 
@@ -49,11 +51,12 @@ ga('send', 'pageview');
 <div id="blackover-nav" class="blackover"></div>
 <nav id="menu">
     <ul>
-        <h3>Navigation</h3>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.baseurl }}/about">About <span class="badge badge-primary">Memoirs Jekyll Theme</span></a></li>
-        <li><a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/">Get Memoirs</a></li>      
-        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>       
+        <div class="newsletter">
+            <img src="{{ site.baseurl }}/{{ site.logo }}" class="newsletter-logo" alt=" {{site.title}}">            
+        </div>
+        <li><a href="{{ site.baseurl }}/">Anasayfa</a></li>
+        <li><a href="{{ site.baseurl }}/about">Hakkında</a></li>     
+        <li><a href="{{ site.baseurl }}/contact">İletişim</a></li>       
     </ul>   
 </nav>
 
@@ -81,7 +84,12 @@ ga('send', 'pageview');
         <p class="sitetag">
             {{ site.description }}
         </p>
+        <div class="social_icons d-flex flex-row justify-content-center">
+            <a href="https://twitter.com/AcikVeriDernegi"><i class="fab fa-twitter-square fa-3x mx-2"></i></a>
+            <a href="https://github.com/avvg"><i class="fab fa-github-square fa-3x mx-2"></i></a>           
+        </div>
     {% endif %}
+
 
     <!-- Content
     ================================================== -->
@@ -93,11 +101,11 @@ ga('send', 'pageview');
     <!-- Newsletter
     ================================================== -->
     <div class="newsletter text-center">
-        <span class="h4"><img src="{{ site.baseurl }}/{{ site.logo }}" class="newsletter-logo" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+        <span class="h4"><img src="{{ site.baseurl }}/{{ site.logo }}" class="newsletter-logo" alt="{{site.title}}"> &nbsp; E-posta listemize kaydolun</span>
         <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
             <div class="mc-field-group d-inline-flex">
-            <input type="email" placeholder="Your e-mail" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-            <input type="submit" value="Subscribe" name="subscribe" class="heart">
+            <input type="email" placeholder="E-posta adresiniz" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
+            <input type="submit" value="Kaydol" name="subscribe" class="heart">
             </div>
         </form>
     </div>
@@ -112,9 +120,6 @@ ga('send', 'pageview');
         <div class="row">
             <div class="col-md-6 col-sm-12 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
-            </div>
-            <div class="col-md-6 col-sm-12 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
     </div>
@@ -138,6 +143,19 @@ ga('send', 'pageview');
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
+
+<!-- Netlify -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
