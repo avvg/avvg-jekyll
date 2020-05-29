@@ -14,4 +14,4 @@ collections:
     fields:
       - { name: title}
       - { name: body, widget: "markdown"}
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
